@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Софія - Магазин одягу</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Софія</div>
+        <nav class="nav">
+            <a href="#">Головна</a>
+            <a href="#">Про нас</a>
+            <a href="#">Колекції</a>
+            <a href="#">Контакт</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Ласкаво просимо до магазину одягу Софія</h1>
+            <p>Ваш стиль, наша пристрасть.</p>
+            <button class="hero-btn">Переглянути колекцію</button>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h2>Наша історія</h2>
+            <p>Магазин одягу "Софія" був заснований у 2010 році з метою пропонувати найкращі модні тенденції за доступними цінами. Ми прагнемо задовольнити потреби кожного клієнта, надаючи широкий вибір стильного одягу та аксесуарів.</p>
+        </div>
+        <div class="feature">
+            <h2>Наші колекції</h2>
+            <p>Ми пропонуємо різноманітні колекції для жінок, чоловіків та дітей, які включають в себе повсякденний, вечірній та спортивний одяг.</p>
+        </div>
+        <div class="feature">
+            <h2>Спеціальні пропозиції</h2>
+            <p>Слідкуйте за нашими акціями та знижками! Приєднуйтесь до нашого списку розсилки, щоб не пропустити вигідні пропозиції.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Софія. Всі права захищені.</p>
+    </footer>
+</body>
+</html>
