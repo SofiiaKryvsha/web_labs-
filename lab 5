@@ -1,0 +1,111 @@
+1. // Задача: Написати функцію, яка приймає рядок і замінює всі голосні (a, e, i, o, u)  
+// на певний символ, наприклад *.
+
+function replaceVowels(str) {
+  const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+  
+  let result = '';
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(str[i])) {
+      result += '*'; // Замінюємо голосну на '*'
+    } else {
+      result += str[i]; // Залишаємо символ незмінним
+    }
+  }
+  
+  return result;
+}
+
+console.log(replaceVowels("hello world")); // Виведе: "h*ll* w*rld"
+console.log(replaceVowels("Javascript"));  // Виведе: "J*v*scr*pt"
+
+module.exports = replaceVowels;
+
+2. // Задача: Написати функцію, яка приймає рядок і повертає його у зворотному порядку,
+//  при цьому пропускаючи всі цифри.
+
+function reverseWithoutNumbers(str) {
+  let lettersOnly = [];
+  
+  // Проходимо через кожен символ і додаємо тільки ті, що не є цифрами
+  for (let i = 0; i < str.length; i++) {
+    if (isNaN(str[i]) || str[i] === ' ') {
+      lettersOnly.push(str[i]);
+    }
+  }
+
+  // Перевертаємо масив і об'єднуємо в рядок
+  let reversedStr = '';
+  for (let i = lettersOnly.length - 1; i >= 0; i--) {
+    reversedStr += lettersOnly[i];
+  }
+
+  return reversedStr;
+}
+
+console.log(reverseWithoutNumbers("hello123world456")); // Виведе: "dlrowolleh"
+console.log(reverseWithoutNumbers("abc123xyz"));       // Виведе: "zyxabc"
+
+module.exports = reverseWithoutNumbers;
+
+3. // Задача: Напишіть функцію sumArray, яка приймає масив чисел і 
+// повертає їхню суму. Використовуйте цикл для обчислення суми.
+
+function sumArray(numbers) {
+  let sum = 0;
+
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+
+  return sum;
+}
+
+console.log(sumArray([1, 2, 3, 4, 5])); // Виведе: 15
+console.log(sumArray([10, 20, 30]));    // Виведе: 60
+
+module.exports = sumArray;
+
+4. // Задача: Напишіть функцію findMax, яка приймає масив чисел і повертає найбільше число в масиві.
+
+function findMax(numbers) {
+  if (numbers.length === 0) {
+    return null; // Повертаємо null, якщо масив порожній
+  }
+
+  let max = numbers[0]; // Припускаємо, що перше число - найбільше
+
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] > max) {
+      max = numbers[i];
+    }
+  }
+
+  return max;
+}
+
+console.log(findMax([3, 5, 7, 2, 8])); // Виведе: 8
+console.log(findMax([10, 20, 5, 30])); // Виведе: 30
+
+module.exports = findMax;
+
+5. // Задача: Напишіть функцію countOccurrences, яка приймає рядок і символ,
+//  і повертає кількість входжень цього символу в рядку.
+
+
+function countOccurrences(str, char) {
+  let count = 0;
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === char) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+console.log(countOccurrences("hello world", 'o')); // Виведе: 2
+console.log(countOccurrences("banana", 'a'));       // Виведе: 3
+
+module.exports = countOccurrences;
